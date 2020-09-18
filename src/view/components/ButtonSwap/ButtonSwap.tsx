@@ -7,7 +7,7 @@ interface Props {
   onClick?: () => void;
 }
 
-const ButtonSwapCurrency = ({ onClick }: Props) => (
+export const ButtonSwap = ({ onClick }: Props) => (
   <ButtonWrapper onClick={onClick} type='default' icon={<RetweetOutlined />} />
 );
 
@@ -29,5 +29,3 @@ const ButtonWrapper = styled(Button)`
     height: 25px;
   }
 `;
-
-export default ButtonSwapCurrency;

@@ -1,11 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { ReactComponent as Logo } from '../resources/logo.svg';
+import { ReactComponent as Logo } from 'view/assets/icons/logo.svg';
 
-const Header = () => (
+export const Header = () => (
   <Wrapper>
     <LogoStyled />
+    <Title>Awesome Currency Converter</Title>
   </Wrapper>
 );
 
@@ -20,8 +21,14 @@ const Wrapper = styled.div`
 `;
 
 const LogoStyled = styled(Logo)`
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 `;
 
-export default Header;
+const Title = styled.h1.attrs({
+  className: 'font-h1'
+})`
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--secondaryText);
+`;

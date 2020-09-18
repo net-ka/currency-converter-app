@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 
-import RobotoRegular from './fonts/Roboto/Roboto-Regular.ttf';
-import RobotoBold from './fonts/Roboto/Roboto-Bold.ttf';
+import RobotoRegular from './view/assets/fonts/Roboto/Roboto-Regular.ttf';
+import RobotoBold from './view/assets/fonts/Roboto/Roboto-Bold.ttf';
 
 export const bodyStyles = css`
   font-family: 'Roboto', sans-serif;
@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
       --mainText: ${theme.mainText};
       --secondaryText: ${theme.secondaryText};
       --mainAccent: ${theme.mainAccent};
+      --secondaryAccent: ${theme.secondaryAccent};
       --extraAccent: ${theme.extraAccent};
       --border: ${theme.border};
       --defaultBackground: ${theme.defaultBackground};
@@ -69,11 +70,12 @@ const GlobalStyle = createGlobalStyle`
       src: local('Roboto'),
       url(${RobotoRegular}) format('ttf');
     }
+    
   @font-face {
-      font-family: 'LatoBold';
+      font-family: 'RobotoBold';
       font-style: normal;
       font-weight: bold;
-      src: local('LatoBold'),
+      src: local('RobotoBold'),
       url(${RobotoBold}) format('ttf');
     }
 

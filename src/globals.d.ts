@@ -6,6 +6,7 @@ declare module 'styled-components' {
     mainText: string;
     secondaryText: string;
     mainAccent: string;
+    secondaryAccent: string;
     extraAccent: string;
     border: string;
     defaultBackground: string;
