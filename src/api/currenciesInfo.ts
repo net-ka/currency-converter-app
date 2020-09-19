@@ -1,7 +1,7 @@
 import { api } from './api';
 
 export const exchangeToday = () => {
-  return api.request<ExchangeTodayData>({
+  return api.request<ExchangeTodayData[]>({
     method: 'GET',
     url: 'pubinfo?json&exchange&coursid=5',
   });

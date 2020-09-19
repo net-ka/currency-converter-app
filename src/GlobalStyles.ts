@@ -21,7 +21,7 @@ export const fontH1Styles = css`
 
 export const fontH2Styles = css`
   ${boldFontStyles};
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const fontBody1Styles = css`
