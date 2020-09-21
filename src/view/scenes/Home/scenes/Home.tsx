@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import styled from 'styled-components';
 import { Layout, Row, Col } from 'antd';
 
-import 'antd/dist/antd.css';
-
 import { exchangeToday, ExchangeTodayData } from 'api/currenciesInfo';
 
 import { PageWrapper } from 'view/components/PageWrapper';

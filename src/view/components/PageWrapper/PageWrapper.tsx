@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { Header } from 'view/components/Header';
+import { Footer } from 'view/components/Footer';
 
 export const PageWrapper = ({ children }:Props) => (
   <Wrapper>
@@ -9,7 +10,7 @@ export const PageWrapper = ({ children }:Props) => (
       <Header />
       {children}
     </Container>
-    <SomeFooter />
+    <Footer />
   </Wrapper>
 );
 
@@ -25,10 +26,4 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   flex: 1 0 auto; 
-`;
-
-const SomeFooter = styled.div`
-  flex: 0 0 auto;
-  height: 50px;
-  background: var(--secondaryAccent);
 `;

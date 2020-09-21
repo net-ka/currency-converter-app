@@ -6,7 +6,7 @@ import { ExchangeTodayData } from 'api/currenciesInfo';
 
 const { Option } = Select;
 
-export const Dropdown = ({ data, currencyProp = '', currency, ...props }: Props) => {
+export const Dropdown = ({ data, currencyProp = '', onSelect, value, defaultValue }: Props) => {
 
   const values = data && data.reduce((acc, item) => {
     const optionValue = currencyProp === 'ccy' ? item.ccy : item.base_ccy;
@@ -17,21 +17,28 @@ export const Dropdown = ({ data, currencyProp = '', currency, ...props }: Props)
     return [...acc, optionValue];
   }, []);
 
-  console.log(values);
-
   return (
-    <Select value={currency[currencyProp]} {...props} >
+    <SelectStyled onSelect={onSelect} value={value} defaultValue={defaultValue}>
       {values.map((item, i) => (
           <Option value={item} key={`${i}-${item}`}>{item}</Option>
         )
       )}
-    </Select>
+    </SelectStyled>
   );
 }
+
+const SelectStyled = styled(Select)`
+  &.ant-select:focus {
+    border-color: var(--mainAccent);
+    box-shadow: none;
+  }
+`;
 
 interface Props {
   data: ExchangeTodayData[];
   currencyProp: string;
-  currency: ExchangeTodayData;
+  onSelect: (arg: number) => void;
+  value: string;
+  defaultValue: string;
 }
 
