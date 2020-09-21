@@ -5,7 +5,9 @@ import { ReactComponent as Logo } from 'view/assets/icons/logo.svg';
 
 export const Header = () => (
   <Wrapper>
-    <LogoStyled />
+    <LogoWrapper>
+      <Logo />
+    </LogoWrapper>
     <Title>Awesome Currency Converter</Title>
   </Wrapper>
 );
@@ -20,7 +22,7 @@ const Wrapper = styled.div`
   padding: 0 80px;
 `;
 
-const LogoStyled = styled(Logo)`
+const LogoWrapper = styled.div`
   width: 70px;
   height: 70px;
 `;
